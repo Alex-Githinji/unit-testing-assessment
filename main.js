@@ -65,7 +65,7 @@ function languages(grade) {
         return "sup";
     }
 }
-//  function languages = ("English , Swahili, computer");
+
 const English = 67;
 const Swahili = 65;
 const computer = 79;
@@ -103,4 +103,5 @@ console.log(result.output);  // Output grades for each subject
 console.log("averageMarks", result.averageMarks); 
 
 
-module.exports = {sciences,religiousEducation,languages};
+module.exports = {sciences,religiousEducation,languages,calculateGradesAndAverage};
+

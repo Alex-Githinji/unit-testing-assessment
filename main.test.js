@@ -64,20 +64,32 @@ describe ("languages", () => {
             
 })     
 
- describe ("calculateGradesAndAverage" , () => {
-    it("should return the average and grades for each subject" , () => {
-        const result = calculateGradesAndAverage(80, 70, 60, 50, 70, 55, 63
-            );
-            expect(result).toEqual({
-                average: 64,
-                grades: {
-                    mathematics: "A",
-                    science: "B",
-                    religiousEducation: "C",
-                    languages: "D"
-                    }
-                    });
-        })
- })
-    
-        
+
+describe("calculateGradesAndAverage", () => {
+    it("should return an object with grades and average", () => {
+        const studentScores = {
+            math: 67,
+            english: 60,
+            swahili: 71,
+            physics: 80,
+            chemistry: 55,
+            religiousEducation: 81,
+            computer: 69
+        };
+        const result =((studentScores.math + studentScores.english + studentScores.swahili + studentScores.physics + studentScores.chemistry + studentScores.religiousEducation + studentScores.computer) / 7)
+        expect(calculateGradesAndAverage(studentScores)).toEqual({
+            output: {
+               
+                math: "B", 
+                physics: "B", 
+                chemistry: "A", 
+                religiousEducation: "A",
+                Swahili: "C", 
+                computer: "A", 
+                English: "B"
+            },
+            averageMarks: 69
+        });
+    });
+});
+
